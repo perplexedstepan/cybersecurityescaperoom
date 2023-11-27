@@ -1,5 +1,7 @@
 # Cybersecurity Escape Room
 
+This was created by Steven Hatting as part of a final project for Advanced Enterprise Security - one of the M-IT courses at New Mexico State University.
+
 ## What is Cybersecurity Training?
 
 Cybersecurity training is a special training whose purpose is to "bring awareness to certain security exploits and reporting possible exploits when discovered" (Alvero, K.M. (2021, Aug 27). What Role do Humans Play in Ensuring Cybersecurity? ISACA. https://www.isaca.org/resources/isaca-journal/issues/2021/volume-5/what-role-do-humans-play-in-ensuring-cybersecurity).
