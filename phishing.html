@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cybersecurity Training Emails</title>
+    <style>
+        #emailContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        #emailContent {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 0 10px;
+        }
+        .email {
+            display: none; /* Hide all emails initially */
+        }
+        .email.active {
+            display: block; /* Only show the active email */
+        }
+        .trigger-word {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="emailContainer">
+        <button id="prevBtn"><</button>
+        <div id="emailContent">
+            <!-- Each email is a separate div -->
+            <div class="email" id="email1">
+                <!-- Content of Email 1 -->
+                <strong>From:</strong> support@microsoft-support.com<br>
+                <strong>Subject:</strong> Urgent Account Verification Required!<br><br>
+                <p>Dear User,</p>
+                <p>We have detected some unusual activity on your account. It's urgent that you verify your account to avoid suspension. Please click <a href title="TODO: YOUR PASSWORD GOES HERE">[here]</a> to verify your account immediately.</p>
+                Best Regards,<br>
+                The Microsoft Support Team<br>
+            </div>
+            <div class="email" id="email2">
+                <!-- Content of Email 2 -->
+                <strong>From:</strong> contact@yourbankname.com<br>
+                <strong>Subject:</strong> Your Monthly Bank Statement is Ready<br><br>
+                <p>Dear Customer</p>
+                <p>Your monthly bank statement is now available to view in your online banking portal. As always, if you have any questions or concerns, feel free to contact us.</p>
+                Sincerely,<br>
+                Your Bank Customer Service Team
+            </div>
+            <div class="email" id="email3">
+                <!-- Content of Email 3 -->
+                <strong>From:</strong> payroll@yourcompany.hr<br>
+                <strong>Subject:</strong> Action Required: Update Your Direct Deposit Information<br><br>
+                <p>Dear Employee,</p>
+                <p>We are updating our payroll system and require all employees to verify their direct deposit information. Please click <a href title="TODO: YOUR PASSWORD GOES HERE">[here]</a> to update your banking details.</p>
+                Regards,<br>
+                Your Company Payroll Department<br>
+            </div>
+            <div class="email" id="email4">
+                <!-- Content of Email 4 -->
+                <strong>From:</strong> noreply@popularshoppingwebsite.com<br>
+                <strong>Subject:</strong> Congratulations! You’ve won a $500 gift card!<br><br>
+                <p>Hello Lucky Shopper,</p>
+                <p>You've been selected as the winner of a $500 gift card! To claim your prize, please click <a href title="TODO: YOUR PASSWORD GOES HERE">[here]</a> and complete the necessary steps. Hurry, the offer ends soon!</p>
+                Best,<br>
+                Popular Shopping Website Team<br>
+                Beware of Greeks bearing gifts, but not our deals!
+            </div>
+            <div class="email" id="email5">
+                <!-- Content of Email 5 -->
+                <strong>From:</strong> support@yourantivirus.com<br>
+                <strong>Subject:</strong> This Month's Cybersecurity Tips and Tricks<br><br>
+                <p>Hi there,</p>
+                <p>In this month's newsletter, we're covering top tips to keep your devices secure. Don’t forget to update your antivirus regularly and stay alert for suspicious emails!</p>
+                Stay Safe,<br>
+                Your Antivirus Support Team
+            </div>
+        </div>
+        <button id="nextBtn">></button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const emails = document.getElementsByClassName("email");
+    let currentIndex = 0;
+
+    function updateEmailVisibility() {
+        for (let i = 0; i < emails.length; i++) {
+            emails[i].classList.remove('active');
+        }
+        emails[currentIndex].classList.add('active');
+    }
+
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    prevBtn.addEventListener("click", function() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateEmailVisibility();
+        }
+    });
+
+    nextBtn.addEventListener("click", function() {
+        if (currentIndex < emails.length - 1) {
+            currentIndex++;
+            updateEmailVisibility();
+        }
+    });
+
+    // Initially display the first email
+    updateEmailVisibility();
+});
+
+    </script>
+</body>
+</html>
